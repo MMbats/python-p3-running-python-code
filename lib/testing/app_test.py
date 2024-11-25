@@ -15,6 +15,11 @@ class TestAppPy:
         '''
         assert(path.exists("lib/app.py"))
 
+        def test_app_py_exists():
+            '''
+            '''
+    assert(path.exists("lib/app.py"))
+
     def test_app_py_runs(self):
         '''
         is executable
@@ -23,8 +28,9 @@ class TestAppPy:
 
     def test_prints_hello_world(self):
         '''
-        prints "Hello World! Pass this test, please."
+        
         '''
+
         captured_out = io.StringIO()
         sys.stdout = captured_out
         runpy.run_path("lib/app.py")
